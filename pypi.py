@@ -17,7 +17,7 @@ def circle(x,y):
     else: bullseye = 0
     return bullseye
     
-def main(nIter=10**9):
+def main(nIter=10**8):
     bEye=0
     for n in range(nIter):
         x = np.random.uniform(0,1)
@@ -28,8 +28,9 @@ def main(nIter=10**9):
     return PPi
 
 piBucket=[]
-for x in range(1000):
+for x in range(100):
     piBucket.append(main())
     
+print(np.average(piBucket))
 plt.hist(piBucket)
 plt.show()
